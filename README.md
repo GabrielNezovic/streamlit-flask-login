@@ -35,19 +35,30 @@ streamlit run login.py --server.port 8008 --theme.base dark --logger.level info 
 
 <br>
 
-Open up the streamlit page in your browser:
+The following page will automatically be launched in your browser:
 ```
 http://localhost:8008/
 ```
 
+A public URL will also be made available at:
+
+```
+http://<your.public.ip.address>:8008/
+```
+
 <br>
 
-Verify User Authentication using the following credentials:
+User Authentication can be verified using the following credentials:
 
 ```
 user1: password1
 user2: password2
 ```
+
+___
+<h3>Troubleshooting</h3>
+
+Open TCP Network Ports: 5000 + 8008 to allow communication between web browsers and both of the servers.
 
 ___
 <h3>Dependencies</h3>
