@@ -9,7 +9,7 @@ Install requirements:
 
 Clone this repo:
 ```
-git clone https://github.com/github/training-kit.git
+git clone https://github.com/GabrielNezovic/streamlit-flask-login.git
 ```
 Install dependencies:
 ```
