@@ -3,9 +3,16 @@
 
  ___
  
- Install requirements:
- * [Python 3.9](https://www.python.org/downloads/release/python-390/)
- ```
+Install requirements:
+* [Python 3.9](https://www.python.org/downloads/release/python-390/)
+* [git](https://github.com/git-guides/install-git)
+
+Clone this repo:
+```
+git clone https://github.com/github/training-kit.git
+```
+Install dependencies:
+```
 pip install -r requirements.txt
 ```
 <h3>Testing</h1>
@@ -42,6 +49,15 @@ Verify User Authentication using the following credentials:
 user1: password1
 user2: password2
 ```
+
+___
+<h3>Dependencies</h3>
+
+* [Flask](https://pypi.org/project/Flask/)
+* [Streamlit](https://pypi.org/project/Streamlit/)
+* [Requests](https://pypi.org/project/Requests/)
+* [pythonw](https://pypi.org/project/pythonw/) (windows users) 
+
 
 ___
 
