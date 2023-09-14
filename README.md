@@ -19,7 +19,7 @@ Open up the streamlit page:
 http://localhost:8008/
 ```
 
-Test the user authentication using:
+Verify User Authentication using sample credentials:
 
 ```
 user1: password1
