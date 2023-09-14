@@ -1,2 +1,2 @@
 # streamlit-flask-login
- Template for User Authentication using Streamlit and Flask
+ A barebones template for encrypted User Authentication using Streamlit and Flask
