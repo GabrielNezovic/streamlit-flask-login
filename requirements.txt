@@ -1,2 +1,3 @@
-flask
-streamlit
+flask==2.3.3
+streamlit==1.26.0
+pythonw==3.0.3
