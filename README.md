@@ -14,7 +14,12 @@ Start both servers at the same time with:
 run.bat
 ```
 
-Login Credentials:
+Open up the streamlit page:
+```
+http://localhost:8008/
+```
+
+Test the user authentication using:
 
 ```
 user1: password1
