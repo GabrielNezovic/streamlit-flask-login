@@ -21,7 +21,7 @@ run.bat
 Alternatively, run the following 2 commands separately -
 * Start the Flask API server:
 ```
-pythow flask_api.py
+python flask_api.py
 ```
 * Start the Streamlit Web UI server:
 ```
