@@ -5,8 +5,8 @@
 
  <h3>Setup</h3>
 
-1. Download the latest release from [here](https://github.com/GabrielNezovic/streamlit-flask-login/releases/tag/latest).
-2. Unzip the files.
+1. Download the latest release from [here](https://github.com/GabrielNezovic/streamlit-flask-login/releases/tag/latest)
+2. Unzip the files
  
 3. Install [Python 3.9](https://www.python.org/downloads/release/python-390/)
 
