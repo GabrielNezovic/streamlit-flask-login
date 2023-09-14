@@ -4,7 +4,7 @@
  ___
  
  Install requirements:
- * Python 3.9
+ * [Python 3.9](https://www.python.org/downloads/release/python-390/)
  ```
 pip install -r requirements.txt
 ```
