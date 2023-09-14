@@ -25,7 +25,7 @@ python flask_api.py
 ```
 * Start the Streamlit Web UI server:
 ```
-streamlit run login.py --browser.gatherUsageStats false --client.toolbarMode minimal --theme.base dark --logger.level info --server.port 8008 --server.enableStaticServing true
+streamlit run login.py --browser.gatherUsageStats false --client.toolbarMode minimal --logger.level info --theme.base dark --server.port 8008
 ```
 
 <br>
