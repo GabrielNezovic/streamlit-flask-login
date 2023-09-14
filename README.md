@@ -56,7 +56,7 @@ ___
 * [Flask](https://pypi.org/project/Flask/)
 * [Streamlit](https://pypi.org/project/Streamlit/)
 * [Requests](https://pypi.org/project/Requests/)
-* [pythonw](https://pypi.org/project/pythonw/) (windows users) 
+* [pythonw](https://pypi.org/project/pythonw/) (optional)
 
 
 ___
