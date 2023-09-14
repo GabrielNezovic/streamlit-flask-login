@@ -1,5 +1,34 @@
 import streamlit as st
+from streamlit import runtime
+from streamlit.runtime.scriptrunner import get_script_run_ctx
 import requests
+import socket
+
+# Get the users IP address - useful for validating a public facing URL
+def get_remote_ip() -> str:
+    """Get remote ip."""
+    try:
+        ctx = get_script_run_ctx()
+        if ctx is None:
+            return None
+
+        session_info = runtime.get_instance().get_client(ctx.session_id)
+        if session_info is None:
+            return None
+    except Exception as e:
+        return None
+
+    return session_info.request.remote_ip
+    
+# Display the visitors public IP address as the host address
+host = get_remote_ip()
+streamlit_port = "8008"
+flask_port = "5000"
+
+login = "http://" + host + ":" + streamlit_port 
+server = "http://" + host + ":" + flask_port 
+
+st.markdown(f'[Login URL]({login})')
 
 # Function to encrypt the password
 def encrypt_password(password, key):
@@ -17,7 +46,7 @@ def authenticate_user(username, password, special_key):
     encrypted_password = encrypt_password(password, special_key)
 
     data = {"username": username, "password": encrypted_password, "special_key": special_key}
-    response = requests.post("http://127.0.0.1:5000/authenticate", json=data)
+    response = requests.post(f"{server}/authenticate", json=data)
     return response
 
 # Streamlit UI for username and password input
@@ -26,7 +55,7 @@ password = st.text_input("Password", type="password")
 
 if st.button("Login"):
     # Get the special key from the Flask app
-    special_key_response = requests.post("http://127.0.0.1:5000/generate-special-key")
+    special_key_response = requests.post(f"{server}/generate-special-key")
     special_key = special_key_response.json().get("special_key")
 
     if special_key:

@@ -11,6 +11,8 @@ user_data = {
 
 # Use a secret key or unique text string here - can be anything you like
 hash = "molemander"
+host = "0.0.0.0"
+port = "5000"
 
 # Dictionary to store single-use special keys
 special_keys = {}
@@ -85,4 +87,4 @@ def generate_and_return_special_key():
     return jsonify({"special_key": key}), 200
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host=host, port=port)
