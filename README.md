@@ -1,5 +1,5 @@
 # streamlit-flask-login
- A barebones template for encrypted User Authentication using Streamlit as a front-end web UI and Flask as a back-end API server.
+ A barebones template for encrypted User Authentication using Streamlit as a front-end Web UI server and Flask as a back-end API server.
 
  ___
  
@@ -8,24 +8,34 @@
  ```
 pip install -r requirements.txt
 ```
- 
+
+<br>
+
 Windows users can start both servers at the same time with:
 ```
 run.bat
 ```
 
-Alternatively, run these commands in 2 separate consoles:
+<br>
+
+Alternatively, run these commands in 2 separate windows - 
+* Start the Flask API server:
 ```
 pythow flask_api.py
 ```
+* Start the Streamlit Web UI server:
 ```
 streamlit run login.py --browser.gatherUsageStats false --client.toolbarMode minimal --theme.base dark --logger.level info --server.port 8008 --server.enableStaticServing true
 ```
+
+<br>
 
 Open up the streamlit page:
 ```
 http://localhost:8008/
 ```
+
+<br>
 
 Verify User Authentication using sample credentials:
 
