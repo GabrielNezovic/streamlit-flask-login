@@ -2,19 +2,18 @@
  A barebones template for encrypted User Authentication using Streamlit as a front-end Web UI server and Flask as a back-end API server.
 
  ___
- 
-Install requirements:
-* [Python 3.9](https://www.python.org/downloads/release/python-390/)
-* [git](https://github.com/git-guides/install-git)
 
-Clone this repo:
-```
-git clone https://github.com/GabrielNezovic/streamlit-flask-login.git
-```
-Install dependencies:
-```
-pip install -r requirements.txt
-```
+ <h3>Setup</h3>
+
+1. Download the latest release from [here](https://github.com/GabrielNezovic/streamlit-flask-login/releases/tag/latest).
+2. Unzip the files.
+ 
+3. Install [Python 3.9](https://www.python.org/downloads/release/python-390/)
+
+4. Navigate to the extracted folder and install the dependencies with:  
+  ```
+  pip install -r requirements.txt
+  ```
 <h3>Testing</h1>
 Windows users can start both servers at the same time with: 
 
