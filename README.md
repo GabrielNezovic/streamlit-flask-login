@@ -8,10 +8,9 @@
  ```
 pip install -r requirements.txt
 ```
+<h3>Testing</h1>
+Windows users can start both servers at the same time with: 
 
-<br>
-
-Windows users can start both servers at the same time with:
 ```
 run.bat
 ```
