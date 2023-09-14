@@ -18,7 +18,7 @@ run.bat
 
 <br>
 
-Alternatively, run these commands in 2 separate windows - 
+Alternatively, run the following 2 commands separately -
 * Start the Flask API server:
 ```
 pythow flask_api.py
@@ -30,14 +30,14 @@ streamlit run login.py --browser.gatherUsageStats false --client.toolbarMode min
 
 <br>
 
-Open up the streamlit page:
+Open up the streamlit page in your browser:
 ```
 http://localhost:8008/
 ```
 
 <br>
 
-Verify User Authentication using sample credentials:
+Verify User Authentication using the following credentials:
 
 ```
 user1: password1
