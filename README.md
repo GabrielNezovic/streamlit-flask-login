@@ -48,7 +48,7 @@ http://<your.public.ip.address>:8008/
 
 <br>
 
-User Authentication can be verified using the following credentials:
+User Authentication can then be verified using the following credentials:
 
 ```
 user1: password1
