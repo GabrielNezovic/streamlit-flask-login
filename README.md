@@ -16,13 +16,22 @@
   pip install -r requirements.txt
   ```
 
-5. Add the Public IP address of your Streamlit Web UI server to the /flask.py file:
+5. Add the Public IP address of your Streamlit Web UI server to the [flask_api.py](https://github.com/GabrielNezovic/streamlit-flask-login/blob/main/flask_api.py) file:
   ```
 ui_ip = "<your.public.ip.address>" # the public ip address of your server
   ```
 
+6. Add the Public IP address of your Streamlit Web UI server to the [start_ui_server.bat](https://github.com/GabrielNezovic/streamlit-flask-login/blob/main/start_ui_server.bat) file:
+ ```
+ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout keys/ui_cert.key -out keys/ui_cert.pem  -subj "/CN=your.public.ip.address"
+ ```
+7. Add the Public IP address of your Flask API server to the [start_api_server.bat](https://github.com/GabrielNezovic/streamlit-flask-login/blob/main/start_api_server.bat) file
+ ```
+ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout keys/api_key.key -out keys/api_cert.crt -subj "/CN=your.public.ip.address"
+ ```
+
 <h3>Testing</h1>
-Automatically generate self-signed SSL Certificates and launch the Flask API Server & Streamlit Web UI Server
+Automatically generate self-signed SSL Certificates for both of the server apps and then launch the Flask API Server & Streamlit Web UI Server in series:
 
 ```
 start_ui_server.bat
@@ -44,19 +53,24 @@ streamlit run login.py --server.address 0.0.0.0 --server.port 8008 --server.head
 
 The following page will automatically be launched in your browser:
 ```
+[https://localhost:8008/](https://<your.public.ip.address>:8008/)
+```
+
+Aletneratively the page should be available locally via internal IPs, eg:
+
+```
+https://127.0.0.1:8008/
+or
 https://localhost:8008/
-```
-
-A public URL will also be made available at:
-
-```
-https://<your.public.ip.address>:8008/
+or
+https://192.168.1.X:8008/
 ```
 
 <br>
 
 Enter a Username, Password and some extra text to save against the user account and then click on the "Register" button.
-This will automatically take you to the Login page - try to log in with your new details to retrieve and display the user data.
+
+This will automatically take you to the Login page, where you can now log in with your new user details to retrieve and display the saved user data.
 
 ___
 <h3>Troubleshooting</h3>
