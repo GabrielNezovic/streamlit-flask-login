@@ -53,12 +53,12 @@ streamlit run login.py --server.address 0.0.0.0 --server.port 8008 --server.head
 
 <br>
 
-The following page should then automatically be launched in your browser:
+The Streamlit Web UI should then automatically be launched in your browser at:
 ```
-[https://localhost:8008/](https://<your.public.ip.address>:8008/)
+https://<your.public.ip.address>:8008/
 ```
 
-Aletneratively the page should be available locally via internal IPs, eg:
+Alternatively, the Streamlit Web UI should be available locally via internal IPs, eg:
 
 ```
 https://127.0.0.1:8008/
