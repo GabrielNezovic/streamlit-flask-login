@@ -39,19 +39,21 @@ start_ui_server.bat
 
 <br>
 
-Alternatively, run the following 2 commands separately -
+Alternatively, run the following commands separately -
 * Start the Flask API server:
 ```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout keys/api_key.key -out keys/api_cert.crt -subj "/CN=your.public.ip.address"
 python flask_api.py
 ```
 * Start the Streamlit Web UI server:
 ```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout keys/ui_cert.key -out keys/ui_cert.pem  -subj "/CN=your.public.ip.address"
 streamlit run login.py --server.address 0.0.0.0 --server.port 8008 --server.headless true --server.enableCORS false --server.runOnSave true --server.sslCertFile keys/ui_cert.pem --server.sslKeyFile keys/ui_cert.key --runner.fastReruns true --browser.gatherUsageStats false --theme.base dark --logger.level debug --client.toolbarMode minimal --client.showErrorDetails true
 ```
 
 <br>
 
-The following page will automatically be launched in your browser:
+The following page should then automatically be launched in your browser:
 ```
 [https://localhost:8008/](https://<your.public.ip.address>:8008/)
 ```
