@@ -25,7 +25,7 @@ ui_ip = "<your.public.ip.address>" # the public ip address of your server
  ```
  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout keys/ui_cert.key -out keys/ui_cert.pem  -subj "/CN=your.public.ip.address"
  ```
-7. Add the Public IP address of your Flask API server to the [start_api_server.bat](https://github.com/GabrielNezovic/streamlit-flask-login/blob/main/start_api_server.bat) file
+7. Add the Public IP address of your Flask API server to the [start_api_server.bat](https://github.com/GabrielNezovic/streamlit-flask-login/blob/main/start_api_server.bat) file:
  ```
  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout keys/api_key.key -out keys/api_cert.crt -subj "/CN=your.public.ip.address"
  ```
@@ -39,7 +39,8 @@ start_ui_server.bat
 
 <br>
 
-Alternatively, run the following commands separately -
+Alternatively, run the following commands separately to launch the servers -
+
 * Start the Flask API server:
 ```
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout keys/api_key.key -out keys/api_cert.crt -subj "/CN=your.public.ip.address"
@@ -58,7 +59,7 @@ The Streamlit Web UI should then automatically be launched in your browser at:
 https://<your.public.ip.address>:8008/
 ```
 
-Alternatively, the Streamlit Web UI should be available locally via internal IPs, eg:
+The Streamlit Web UI should be available locally via internal IPs, such as:
 
 ```
 https://127.0.0.1:8008/
@@ -70,9 +71,16 @@ https://192.168.1.X:8008/
 
 <br>
 
-Enter a Username, Password and some extra text to save against the user account and then click on the "Register" button.
+![image](https://github.com/GabrielNezovic/streamlit-flask-login/assets/138544043/054d0037-0ee3-4a38-accc-b0da1aa062d4)
 
-This will automatically take you to the Login page, where you can now log in with your new user details to retrieve and display the saved user data.
+Enter a Username, Password and some extra text to be saved against the user account and then click on the "Register" button.
+
+This will then redirect you you to the Login page where you can log in with your new user details:
+![image](https://github.com/GabrielNezovic/streamlit-flask-login/assets/138544043/62087d89-db9f-4cb5-87d1-e3b8ff6dd572)
+
+Successful authentication will result in automatically retrieving and displaying the saved user data for that account.
+![image](https://github.com/GabrielNezovic/streamlit-flask-login/assets/138544043/48a36d38-5f6d-4dfa-976e-e7d9dba8ffe2)
+
 
 ___
 <h3>Troubleshooting</h3>
@@ -91,3 +99,7 @@ ___
 ___
 
 [@GabrielNezovic](https://github.com/GabrielNezovic) 2023
+
+
+
+
