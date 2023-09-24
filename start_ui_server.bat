@@ -10,4 +10,4 @@ if not exist keys/ui_cert.pem (
     echo SSL certificate generated successfully.
 )
 
-start /B pythonw -m streamlit run login.py --server.address 0.0.0.0 --server.port 8008 --server.headless true --server.enableCORS false --server.runOnSave true --server.sslCertFile keys/ui_cert.pem --server.sslKeyFile keys/ui_cert.key --runner.fastReruns true --browser.gatherUsageStats false --theme.base dark --logger.level debug --client.toolbarMode minimal --client.showErrorDetails true
+start /B pythonw -m streamlit run login.py --server.address 0.0.0.0 --server.port 8008 --server.headless true --server.enableCORS false --server.sslCertFile keys/ui_cert.pem --server.sslKeyFile keys/ui_cert.key --browser.gatherUsageStats false --theme.base dark --logger.level debug --client.toolbarMode minimal --client.showErrorDetails true

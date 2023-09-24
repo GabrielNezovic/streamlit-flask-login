@@ -4,3 +4,4 @@ pythonw==3.0.3
 requests==2.31.0
 Flask-JWT-Extended==4.5.2
 pythonw==3.0.3
+extra-streamlit-components==0.1.60
