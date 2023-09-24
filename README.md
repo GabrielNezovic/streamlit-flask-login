@@ -6,6 +6,7 @@
  <h3>Setup</h3>
 
 1. Download the latest release from [here](https://github.com/GabrielNezovic/streamlit-flask-login/releases/tag/latest)
+
 2. Unzip the files
  
 3. Install [Python 3.9](https://www.python.org/downloads/release/python-390/)
@@ -14,11 +15,17 @@
   ```
   pip install -r requirements.txt
   ```
+
+5. Add the Public IP address of your Streamlit Web UI server to the /flask.py file:
+  ```
+ui_ip = "<your.public.ip.address>" # the public ip address of your server
+  ```
+
 <h3>Testing</h1>
-Windows users can start both servers at the same time with: 
+Automatically generate self-signed SSL Certificates and launch the Flask API Server & Streamlit Web UI Server
 
 ```
-run.bat
+start_ui_server.bat
 ```
 
 <br>
@@ -30,30 +37,26 @@ python flask_api.py
 ```
 * Start the Streamlit Web UI server:
 ```
-streamlit run login.py --server.address localhost --server.port 8008 --theme.base dark  --logger.level info --browser.gatherUsageStats false
+streamlit run login.py --server.address 0.0.0.0 --server.port 8008 --server.headless true --server.enableCORS false --server.runOnSave true --server.sslCertFile keys/ui_cert.pem --server.sslKeyFile keys/ui_cert.key --runner.fastReruns true --browser.gatherUsageStats false --theme.base dark --logger.level debug --client.toolbarMode minimal --client.showErrorDetails true
 ```
 
 <br>
 
 The following page will automatically be launched in your browser:
 ```
-http://localhost:8008/
+https://localhost:8008/
 ```
 
 A public URL will also be made available at:
 
 ```
-http://<your.public.ip.address>:8008/
+https://<your.public.ip.address>:8008/
 ```
 
 <br>
 
-User Authentication can then be verified using the following credentials:
-
-```
-user1: password1
-user2: password2
-```
+Enter a Username, Password and some extra text to save against the user account and then click on the "Register" button.
+This will automatically take you to the Login page - try to log in with your new details to retrieve and display the user data.
 
 ___
 <h3>Troubleshooting</h3>
