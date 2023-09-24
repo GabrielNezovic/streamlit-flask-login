@@ -75,7 +75,7 @@ https://192.168.1.X:8008/
 
 Enter a Username, Password and some extra text to be saved against the user account and then click on the "Register" button.
 
-This will then redirect you you to the Login page where you can log in with your new user details:
+This will then redirect the user to the Login page where they can log in with their new user details:
 ![image](https://github.com/GabrielNezovic/streamlit-flask-login/assets/138544043/62087d89-db9f-4cb5-87d1-e3b8ff6dd572)
 
 Successful authentication will result in automatically retrieving and displaying the saved user data for that account.
